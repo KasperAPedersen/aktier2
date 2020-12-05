@@ -1,0 +1,27 @@
+{
+  "name": "aktier2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e js,html,css app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KasperAPedersen/aktier2.git"
+  },
+  "author": "KasperAPedersen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KasperAPedersen/aktier2/issues"
+  },
+  "homepage": "https://github.com/KasperAPedersen/aktier2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "unirest": "^0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
