@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgba(230, 230, 230, 1);
+}
+
+.swp {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.floatFixer {
+    clear: both;
+}
+
+/* -- Stock Card -- */
+.stockCard {
+    position: relative;
+    padding: 15px;
+    margin: 5px;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.stockCard>h3 {
+    width: 100%;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.stockCard>.cardStockMarketStatus {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.stockCard>.cardStockMarket {
+    color: rgba(0, 0, 0, 0.2);
+    padding-top: 15px;
+    float: left;
+    width: 33.3%;
+}
+
+.stockCard>.cardStockPriceHigh, .stockCard>.cardStockPriceLow {
+    color: rgba(0, 0, 0, 0.2);
+    padding-top: 15px;
+    float: left;
+    width: 33.3%;
+    text-align: right;
+}
+
+@media only screen and (min-width: 625px) {
+    .stockCard {
+        width: calc(50% - 20px);
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .stockCard {
+        width: calc(33.3% - 30px);
+        float: left;
+    }
+}
+
+/* -- Nav -- */
+nav>.swp>form {
+    margin: 5px;
+    padding: 15px;
+    float: left;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+nav>.swp>#updateForm {
+    display: inline-block;
+}
+
+nav>.swp>#addForm {
+    width: 300px;
+}
+
+nav>.swp>#userForm {
+    width: 300px;
+}
+
+nav>.swp>form>input[type="text"] {
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-left: 2px solid rgba(222, 205, 147, 1);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+nav>.swp>form>.formBtn {
+    background-color: rgba(222, 205, 147, 1);
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    float: right;
+}
+
+nav>.swp>form>.formBtn:hover {
+    cursor: pointer;
+}
