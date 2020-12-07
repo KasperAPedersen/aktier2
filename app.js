@@ -2,6 +2,8 @@ let usePort = 3000;
 //
 let stocks = []; // name, currency, marked, price, marked status, day high, day low, currency symbol
 //
+let db = require('./db.js');
+let encryption = require('./encryption.js'); // Requiring crypto module -> used to encrypt/decrypt user information
 let unirest = require('unirest'); // Requiring unirest module -> used for api calls
 let express = require('express'); // Requiring express module -> used as bridge between server/client
 let app = new express(); // Creating an instance of the express module
@@ -48,6 +50,37 @@ app.get('/update/all', (req, res) => {
         }, 5000);
     }
 });*/
+
+app.get('/login', (req, res) => {
+    let uname = req.query["uname"];
+    let pword = req.query["pword"];
+    if((uname != undefined && uname != "" && uname != 0) && (pword != undefined && pword != "" && pword != 0)) {
+        db.query(`SELECT * FROM users WHERE username = "${uname}" LIMIT 1`, (result) => {
+            if(result[0] != undefined) {
+                let hash = {
+                    "initializationVector": result[0].iv,
+                    "content": result[0].password
+                };
+                if(encryption.decrypt(hash) == pword) {
+                    // Set session cookie and redirect client to watchlist.html
+                    res.send({"success": 1});
+                    res.end();
+                } else {
+                    res.send({"success": 0});
+                    res.end();
+                }
+            } else {
+                res.send({"success": 0});
+                res.end();
+            }
+        });
+        
+    } else {
+        res.send({"success": 0});
+        res.end();
+    }
+    
+});
 
 app.listen(usePort, (err) => {
     if(!err) {
