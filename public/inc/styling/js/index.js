@@ -18,7 +18,22 @@ document.getElementById('loginBtn').addEventListener('click', () => {
         return;
     }
 
-    alert("success", "Succesfully signed in!");
+
+    fetch(`/login?uname=${uname}&pword=${pword}`)
+    .then((res) => {
+        if(res.status !== 200) {
+            throw new Error("Something went wrong!");
+        } else {
+            return res.json();
+        }
+    })
+    .then((json) => {
+        if(json.success == 1) {
+            alert("success", "Succesfully signed in!");
+        } else {
+            alert("failure", "Failure signing in!");
+        }
+    })
 });
 
 function alert(type, msg) {
