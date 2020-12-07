@@ -5,7 +5,7 @@ let stocks = []; // name, currency, marked, price, marked status, day high, day 
 let unirest = require('unirest'); // Requiring unirest module -> used for api calls
 let express = require('express'); // Requiring express module -> used as bridge between server/client
 let app = new express(); // Creating an instance of the express module
-
+/*
 app.get('/stock/add', (req, res) => {
     if(req.query["name"] != undefined) {
         stocks.push([req.query["name"], "DKK", "Nasdaq", 0, "åben", 1.0, 0.1, "DKK"]);
@@ -47,7 +47,7 @@ app.get('/update/all', (req, res) => {
             res.end();
         }, 5000);
     }
-});
+});*/
 
 app.listen(usePort, (err) => {
     if(!err) {

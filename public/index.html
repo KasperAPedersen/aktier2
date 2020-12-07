@@ -2,33 +2,22 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Swoopais aktieliste</title>
+        <title>Swoopai</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="inc/styling/css/index.css" type="text/css">
     </head>
     <body>
-        <nav>
-            <div class="swp">
-                <form id="userForm" onsubmit="event.preventDefault();">
-                    <input type="text" id="userId" placeholder="User">
-                    <div id="showBtn" class="formBtn">Show</div>
-                    <div class="floatFixer"></div>
-                </form>
-                <form id="addForm" onsubmit="event.preventDefault();">
-                    <input type="text" id="stockName" placeholder="Stock Name">
-                    <div id="submitBtn" class="formBtn">Add</div>
-                    <div class="floatFixer"></div>
-                </form>
-                <form id="updateForm" onsubmit="event.preventDefault();">
-                    <div id="updateBtn" class="formBtn">Update</div>
-                    <div class="floatFixer"></div>
-                </form>
-            </div>
-        </nav>
-        <div class="floatFixer"></div>
+        <div id="alert"></div>
         <div class="swp">
-            <div id="stocks"></div>
+            <form id="check" method="POST" onsubmit="event.preventDefault();">
+                <p>Please sign in to continue!</p>
+                <input type="text" id="uname" placeholder="Username">
+                <input type="password" id="pword" placeholder="Password">
+                <div class="floatFixer"></div>
+                <div id="loginBtn" class="button">Login</div>
+                <div class="floatFixer"></div>
+            </form>
         </div>
         <script src="inc/styling/js/index.js"></script>
     </body>

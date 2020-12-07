@@ -1,3 +1,4 @@
+/* -- Commons -- */
 * {
     margin: 0;
     padding: 0;
@@ -18,103 +19,97 @@ body {
     clear: both;
 }
 
-/* -- Stock Card -- */
-.stockCard {
-    position: relative;
-    padding: 15px;
-    margin: 5px;
-
+/* -- Login formular -- */
+.swp>form {
+    margin-top: calc((100% / 2) - 133px);
+    margin-bottom: calc((100% / 2) - 133px);
+    padding-bottom: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    border: 2px solid transparent;
+    border-left: 2px solid rgba(222, 205, 147, 1);
 }
 
-.stockCard>h3 {
-    width: 100%;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-    color: rgba(0, 0, 0, 0.7);
-}
 
-.stockCard>.cardStockMarketStatus {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    color: rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-}
 
-.stockCard>.cardStockMarket {
-    color: rgba(0, 0, 0, 0.2);
-    padding-top: 15px;
-    float: left;
-    width: 33.3%;
-}
-
-.stockCard>.cardStockPriceHigh, .stockCard>.cardStockPriceLow {
-    color: rgba(0, 0, 0, 0.2);
-    padding-top: 15px;
-    float: left;
-    width: 33.3%;
-    text-align: right;
-}
-
-@media only screen and (min-width: 625px) {
-    .stockCard {
-        width: calc(50% - 20px);
-        float: left;
-    }
-}
-
-@media only screen and (min-width: 1050px) {
-    .stockCard {
-        width: calc(33.3% - 30px);
-        float: left;
-    }
-}
-
-/* -- Nav -- */
-nav>.swp>form {
-    margin: 5px;
-    padding: 15px;
-    float: left;
-
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-nav>.swp>#updateForm {
-    display: inline-block;
-}
-
-nav>.swp>#addForm {
-    width: 300px;
-}
-
-nav>.swp>#userForm {
-    width: 300px;
-}
-
-nav>.swp>form>input[type="text"] {
+.swp>form>input[type="text"], .swp>form>input[type="password"] {
     background-color: transparent;
     border: 2px solid transparent;
     border-left: 2px solid rgba(222, 205, 147, 1);
-    padding-left: 15px;
-    padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 2.5px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
-nav>.swp>form>.formBtn {
+.swp>form>input[type="text"] {
+    margin-top: 15px;
+}
+
+.swp>form>input[type="text"]:focus, .swp>form>input[type="password"]:focus {
+    outline: none;
+}
+
+.swp>form>.button {
     background-color: rgba(222, 205, 147, 1);
     display: inline-block;
-    padding-left: 15px;
-    padding-right: 15px;
+    float: right;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: #fff;
-    float: right;
 }
 
-nav>.swp>form>.formBtn:hover {
+.swp>form>.button:hover {
     cursor: pointer;
+}
+
+.swp>form>p {
+    background-color: rgba(222, 205, 147, 1);
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: calc(100% + 2px);
+}
+
+@media only screen and (min-width: 350px) {
+    .swp>form {
+        width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* -- Alert -- */
+#alert {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    border: 2px solid red;
+}
+
+#alert>.alertMsg2 {
+    background-color: rgba(135, 211, 124, 1);
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 2.5px;
+}
+
+#alert>.alertMsg1 {
+    background-color: rgba(210, 77, 87, 1);
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 2.5px;
 }
