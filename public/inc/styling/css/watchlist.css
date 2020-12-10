@@ -80,6 +80,7 @@ nav>.swp>form {
 
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    background-color: #fff;
 }
 
 nav>.swp>#updateForm {
@@ -117,4 +118,33 @@ nav>.swp>form>.formBtn {
 
 nav>.swp>form>.formBtn:hover {
     cursor: pointer;
+}
+
+/* -- Alert -- */
+#alert {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    border: 2px solid red;
+}
+
+#alert>.alertMsg2 {
+    background-color: rgba(135, 211, 124, 1);
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 2.5px;
+}
+
+#alert>.alertMsg1 {
+    background-color: rgba(210, 77, 87, 1);
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 2.5px;
 }
