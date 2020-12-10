@@ -1,0 +1,114 @@
+/* -- Commons -- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgba(230, 230, 230, 1);
+}
+
+.swp {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.floatFixer {
+    clear: both;
+}
+
+/* -- Login formular -- */
+.swp>form {
+    margin-top: calc((100% / 2) - 133px);
+    margin-bottom: calc((100% / 2) - 133px);
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border: 2px solid transparent;
+    border-left: 2px solid rgba(222, 205, 147, 1);
+    background-color: #fff;
+}
+
+.swp>form>input[type="text"], .swp>form>input[type="password"] {
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-left: 2px solid rgba(222, 205, 147, 1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 2.5px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.swp>form>input[type="text"] {
+    margin-top: 15px;
+}
+
+.swp>form>input[type="text"]:focus, .swp>form>input[type="password"]:focus {
+    outline: none;
+}
+
+.swp>form>.button {
+    background-color: rgba(222, 205, 147, 1);
+    display: inline-block;
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+}
+
+.swp>form>.button:hover {
+    cursor: pointer;
+}
+
+.swp>form>p {
+    background-color: rgba(222, 205, 147, 1);
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: calc(100% + 2px);
+}
+
+@media only screen and (min-width: 350px) {
+    .swp>form {
+        width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* -- Alert -- */
+#alert {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    border: 2px solid red;
+}
+
+#alert>.alertMsg2 {
+    background-color: rgba(135, 211, 124, 1);
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 2.5px;
+}
+
+#alert>.alertMsg1 {
+    background-color: rgba(210, 77, 87, 1);
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 2.5px;
+}
